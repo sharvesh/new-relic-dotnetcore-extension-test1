@@ -1,0 +1,20 @@
+default_versions: null
+dependencies:
+- name: newrelic
+  sha256: 89060852EC52AB6208F899FEA35C633E6A79DF63CA86A34500AD4F2FD3167E62
+  uri: http://download.newrelic.com/dot_net_agent/previous_releases/8.41.1/newrelic-netcore20-agent-win-x86-8.41.1.0.zip
+  version: latest
+dependency_deprecation_dates: null
+include_files:
+- README.md
+- VERSION
+- bin/detect
+- bin/compile
+- bin/supply
+- bin/finalize
+- bin/release
+- manifest.yml
+- newrelic.config
+language: newrelic-dotnetcore-extension
+pre_package: scripts/build.sh
+stack: cflinuxfs3
